@@ -90,6 +90,16 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  methods: {
+    f () {
+      this.$http.get("http://localhost:8006/wu").then(res => {
+        console.log(res)
+      })
+    }
+  },
+  created () {
+    this.f()
   }
 }
 </script>
